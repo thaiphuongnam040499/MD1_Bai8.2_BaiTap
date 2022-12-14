@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="txt">
+<button type="button" onclick="countList()">ĐẾM</button>
+<p id="result"></p>
+<script>
+  function countList(){
+    let a= document.getElementById('txt').value
+    count = a.split(" ")
+    document.getElementById('result').innerHTML = 'số từ trong chuỗi là ' +count.length
+  }
+
+</script>
+</body>
+</html>

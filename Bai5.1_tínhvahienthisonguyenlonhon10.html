@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính và hiển thị số nguyên lớn hơn 10 trong mảng</title>
+</head>
+<body>
+<script>
+let arr = []
+function getNumber(min,max){
+    for (let i = 0; i < 10; i++) {
+        min=0
+        max=100
+        arr.push(Math.floor(Math.random()*(max-min)+min))
+    }
+    document.write("Mảng ban đầu " + arr, "<br>")
+}
+getNumber()
+function getCondition(){
+    let result = []
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i]>=10){
+            result.push(arr[i])
+        }
+    }
+    document.write("mảng sau khi đã kiểm tra " , result , "<br>" )
+    document.write(result.length)
+}
+getCondition()
+</script>
+</body>
+</html>

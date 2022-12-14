@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5.1</title>
+</head>
+<body>
+<script>
+    let number = [1,4,5,7,2,8,2,56,8,4]
+    let max = 10
+    let index=0
+    let flag = false;
+
+    for (let i = 1; i < number.length; i++) {
+        if (number[i]>= max){
+            max=number[i]
+            index=i
+            flag = true;
+           break
+        }else if (number[i]<max){
+            flag = false;
+        }
+    }
+    if(flag){
+        console.log(true, max , index)
+    }
+    else{
+        console.log(false)
+    }
+</script>
+</body>
+</html>

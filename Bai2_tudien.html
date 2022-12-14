@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<p>Nhập từ cần tìm kiếm</p>
+<input type="text" id="search">
+<button type="button" onclick="textSreach()">Search</button>
+<p id="result"></p>
+<script>
+function textSreach(){
+  let english = ["banane","apple","orange","lemon"]
+  let vietnamese = ['chuối','táo','cam','chanh']
+  let search= document.getElementById('search').value
+  for (let i = 0; i < english.length; i++) {
+    if (search == english[i]){
+      document.getElementById('result').innerHTML = 'Kết quả là: ' + vietnamese[i]
+      break;
+    }else {
+      document.getElementById('result').innerHTML = 'không tìm thấy'
+    }
+
+  }
+}
+</script>
+</body>
+</html>

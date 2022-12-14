@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="Nhapchuoi1" placeholder="chuoi 1">
+<input type="text" id="Nhapchuoi2" placeholder="chuoi 2">
+<button type="button" onclick="soSanh()" >Ket qua</button>
+<script>
+    function soSanh() {
+        let chuoi1 = document.getElementById('Nhapchuoi1').value;
+        let chuoi2 = document.getElementById('Nhapchuoi2').value;
+        if (chuoi1 === chuoi2) {
+            alert("Chuoi 1 bang chuoi 2");
+        } else {
+            alert("Chuoi 1 khac chuoi 1");
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng vui</title>
+</head>
+<style>
+    #faking_textarea{
+        text-align: center;
+    }
+</style >
+<body onload="fake()" id="faking_textarea">
+    <h2>Faking textarea</h2>
+    <form>
+        <label><textarea cols="30" rows="5" id="txt"></textarea></label>
+    </form>
+<script>
+    let array=[]
+    let strArray=" Anh hiếu là thằng ngốc"
+    array=strArray.split('')
+    let str=""
+    function fake(){
+        let text = document.getElementById('txt').value
+        for (let i = 1; i <= text.length; i++) {
+            str=str+array[i]
+            if (i==22){
+                str="";
+            }
+        }
+        document.getElementById('txt').value = str;
+        str="";
+        setTimeout(fake,1)
+    }
+</script>
+</body>
+</html>

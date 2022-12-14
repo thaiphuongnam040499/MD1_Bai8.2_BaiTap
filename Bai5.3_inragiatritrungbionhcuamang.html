@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In ra giá trị trung bình của mảng</title>
+</head>
+<body>
+<p>Nhập vào mảng số nguyên gồm: </p>
+<input type="text" id="number">
+<button type="button" onclick="addValue()">Thêm giá trị</button>
+<button type="button" onclick="testNumber()">Kiểm tra</button>
+<button type="button" onclick="avg()">Tìm AVG</button>
+<p id="result"></p>
+<script>
+    let array= []
+    let data;
+    function addValue(){
+        data = +document.getElementById('number').value
+        array.push(data)
+        document.getElementById('result').innerHTML = array
+    }
+    function testNumber(){
+        let max=0
+        for (let i = 0; i < array.length; i++) {
+            if (array[i]>max){
+                max= array[i]
+            }
+        }
+        document.getElementById('result').innerHTML =  'số lớn nhất là' + max
+    }
+    function avg(){
+        let avg=0;
+        for (let i = 0; i < array.length; i++) {
+            avg= (avg + array[i])/array.length
+        }
+        document.getElementById('result').innerHTML = 'giá trị trung bình là' +avg
+    }
+
+</script>
+</body>
+</html>

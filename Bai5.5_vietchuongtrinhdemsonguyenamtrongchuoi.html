@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số nguyên âm</title>
+</head>
+<body>
+<!--<p>Nhập vào mảng số nguyên gồm: </p>-->
+<!--<input type="text" id="number">-->
+<!--<button type="button" onclick="addValue()">Thêm giá trị</button>-->
+<!--<button type="button" onclick="testNumber()">Kiểm tra</button>-->
+<!--<p id="result"></p>-->
+<script>
+// let array= []
+// let data;
+// function addValue(){
+//     data += document.getElementById('number').value
+//     array.push(data)
+//     document.getElementById('result').innerHTML = array
+// }
+// function testNumber(){
+//     for (let i = 0; i < array.length; i++) {
+//         if (array[i]<0){
+//             soam = array[i]
+//         }
+//     }
+//     document.getElementById('result').innerHTML =  'số nguyên âm là' + soam
+// }
+let arr = []
+function getNumber(min,max){
+    for (let i = 0; i < 10; i++) {
+        min=-50
+        max=50
+        arr.push(Math.floor(Math.random()*(max-min)+min))
+    }
+    document.write("Mảng ban đầu " + arr, "<br>")
+}
+getNumber()
+function testNumber(){
+    let soam =[];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i]<0){
+            soam.push(arr[i])
+        }
+    }document.write(soam)
+}
+testNumber()
+</script>
+</body>
+</html>

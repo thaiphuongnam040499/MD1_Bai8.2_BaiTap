@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<p>Nhập phần tử vào mảng</p>
+<input type="text" id="number">
+<button type="button" onclick="testNumber()">Test</button>
+<button type="button" onclick="testInteger()">Kiểm tra V</button>
+<p id="result"></p>
+<script>
+  let arr = [];
+  let number;
+  function testNumber(){
+    number = +document.getElementById('number').value
+    arr.push(number);
+    document.getElementById('result').innerHTML = 'Mảng được tạo ra ' + arr
+  }
+  function testInteger(){
+      let check = false
+    let V = +prompt('Nhập vào số bạn muốn tìm kiếm')
+    for (let i = 0; i < arr.length; i++) {
+      if (V === arr[i]){
+          check = true
+        V.splice(i,1)
+          break;
+      }else {
+          check = false
+
+      }
+    }
+    if (check){
+        document.write('không có số này' +arr)
+    }else {
+        document.write('không có số này')
+    }
+  }
+</script>
+</body>
+</html>
